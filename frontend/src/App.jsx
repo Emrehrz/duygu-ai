@@ -82,7 +82,7 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>🤖 Duygu AI Chat</h1>
+        <h1>🤖 Duygu AI</h1>
         <p>AI-powered conversation assistant</p>
       </header>
       

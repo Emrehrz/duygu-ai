@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "title": "Happy",
+    "artist": "Pharrell Williams",
+    "genre": "Pop",
+    "valence": 0.9,
+    "energy": 0.8,
+    "tempo": "high"
+  },
+  {
+    "id": 2,
+    "title": "Someone Like You",
+    "artist": "Adele",
+    "genre": "Pop",
+    "valence": -0.8,
+    "energy": 0.3,
+    "tempo": "low"
+  },
+  {
+    "id": 3,
+    "title": "Enter Sandman",
+    "artist": "Metallica",
+    "genre": "Metal",
+    "valence": -0.2,
+    "energy": 0.9,
+    "tempo": "high"
+  },
+  {
+    "id": 4,
+    "title": "Weightless",
+    "artist": "Marconi Union",
+    "genre": "Ambient",
+    "valence": 0.1,
+    "energy": 0.1,
+    "tempo": "low"
+  },
+  {
+    "id": 5,
+    "title": "Uptown Funk",
+    "artist": "Mark Ronson",
+    "genre": "Funk",
+    "valence": 0.85,
+    "energy": 0.8,
+    "tempo": "high"
+  }
+]
