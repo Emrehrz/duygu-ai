@@ -1,5 +1,6 @@
 from sentence_transformers import SentenceTransformer, util
 import torch
+import torch.nn.functional as F
 
 
 class SentimentEngine:
@@ -10,12 +11,21 @@ class SentimentEngine:
             'sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2')
 
         # emotion anchors
+        # GÜNCELLENMİŞ EYLEM ODAKLI ANCHORLAR
         self.anchors = {
-            "happy": "Kendimi mutlu ve pozitif hissediyorum.",
-            "sad": "içimde bir hüzün var, moralim bozuk.",
-            "calm": "Sakin ve huzurlu hissediyorum",
-            "energetic": "Enerjim yüksek ve motiveyim",
-            "lonely": "Kendimi yalnız hissediyorum"
+            "happy": "Yüzüm gülüyor, hayattan keyif alıyorum, neşeli, memnun, pozitif ve sevinçliyim",
+
+            "sad": "İçimde derin bir hüzün var, moralim çok bozuk, ağlamaklı, kederliyim ve mutsuzum",
+
+            # CALM: "Yorgunluk" ve "Rahatlama" kelimelerini buraya sahiplendiriyoruz.
+            # Böylece "işten geldim yorgunum" diyen buraya düşecek.
+            "calm": "Sakinleşmek, dinlenmek, yorgunluğumu atmak, huzur bulmak, sessizlik, gevşemek, acelem yok, rahatlamak, uzanmak",
+
+            # ENERGETIC: "Uyku" kelimesini tamamen siliyoruz.
+            # Sadece SAF HAREKET ve EYLEM kelimeleri bırakıyoruz.
+            "energetic": "Enerji doluyum, yerimde duramıyorum, dans etmek, koşmak, zıplamak, çok hareketliyim, tempo istiyorum, modum yüksek, fişek gibiyim",
+
+            "lonely": "Kimsesizim, terk edilmiş gibi hissediyorum, yanımda birini arıyorum ama yok, dışlanmışım, yalnızım"
         }
 
         # Emotion Mapping (Valence/Arousal)
@@ -39,31 +49,38 @@ class SentimentEngine:
         return embeddings
 
     def analyze(self, user_text: str):
-        # kullanici metnini embeddinge cevir
-        user_embedding = self.model.encode(
-            user_text, convert_to_tensor=True)
+        # 1. Kullanıcı metnini embedding'e çevir
+        user_embedding = self.model.encode(user_text, convert_to_tensor=True)
 
-        # anchorlarla cosine similarity karsilastirmasi
-        scores = {}
+        # 2. Skorları topla (Raw Scores)
+        raw_scores = {}
         for emotion, anchor_emb in self.anchor_embeddings.items():
-            scores[emotion] = util.cos_sim(
+            # Cosine Similarity (-1 ile 1 arası değer üretir)
+            raw_scores[emotion] = util.cos_sim(
                 user_embedding, anchor_emb).item()
 
-        # en yuksek skoru bul
-        best_emotion = max(scores, key=scores.get)
-        confidence = scores[best_emotion]
+        # 3. SOFTMAX UYGULAMA (Skorları %'ye çevirme)
+        # Tensor'a çeviriyoruz
+        score_values = torch.tensor(list(raw_scores.values()))
 
-        # sonuclari valence/arousal a map et
+        # Temperature Scaling: Skorlar birbirine çok yakınsa farkı açmak için
+        # değerleri bir katsayı ile çarpıyoruz (örn: 10).
+        # Bu, kazananı daha belirgin yapar.
+        probabilities = F.softmax(score_values * 10, dim=0)
+
+        # Duyguları ve yeni yüzdeleri eşleştir
+        emotions = list(raw_scores.keys())
+        prob_dict = {emotions[i]: probabilities[i].item()
+                     for i in range(len(emotions))}
+
+        # En yüksek skoru bul
+        best_emotion = max(prob_dict, key=prob_dict.get)
+        confidence = prob_dict[best_emotion]
+
+        # 4. Sonuçları Valence/Arousal'a map et
         result = self.emotion_map[best_emotion].copy()
         result["emotion"] = best_emotion
-
-        # confidence hesabi ( 2. en iyi ile fark veya direkt skor)
-        sorted_scores = sorted(scores.values(), reverse=True)
-        if len(sorted_scores) > 1:
-            result["confidence"] = sorted_scores[0] - \
-                sorted_scores[1]  # basit fark metrigi
-        else:
-            result["confidence"] = sorted_scores[0]  # tek anchor durumu
+        result["confidence"] = confidence  # Artık 0.0 ile 1.0 arası bir yüzde
         result["provider"] = "local"
 
         return result

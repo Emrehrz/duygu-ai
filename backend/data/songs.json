@@ -1,24 +1,87 @@
 [
   {
-    "id": 1,
-    "title": "Happy",
-    "artist": "Pharrell Williams",
+    "id": 14,
+    "title": "Bas Gaza",
+    "artist": "İsmail YK",
     "genre": "Pop",
     "valence": 0.9,
-    "energy": 0.8,
+    "energy": 0.95,
     "tempo": "high"
   },
   {
-    "id": 2,
-    "title": "Someone Like You",
-    "artist": "Adele",
+    "id": 15,
+    "title": "Allah Belanı Versin",
+    "artist": "İsmail YK",
     "genre": "Pop",
     "valence": -0.8,
-    "energy": 0.3,
+    "energy": 0.85,
+    "tempo": "high"
+  },
+  {
+    "id": 16,
+    "title": "Bombabomba.com",
+    "artist": "İsmail YK",
+    "genre": "Pop",
+    "valence": 0.7,
+    "energy": 0.9,
+    "tempo": "high"
+  },
+  {
+    "id": 17,
+    "title": "Haydi Bastır",
+    "artist": "İsmail YK",
+    "genre": "Pop",
+    "valence": 0.4,
+    "energy": 0.8,
+    "tempo": "medium"
+  },
+  {
+    "id": 18,
+    "title": "Her Gece",
+    "artist": "Mirkelam",
+    "genre": "Pop",
+    "valence": 0.6,
+    "energy": 0.7,
+    "tempo": "medium"
+  },
+  {
+    "id": 19,
+    "title": "Asuman Pansuman",
+    "artist": "Mirkelam",
+    "genre": "Pop",
+    "valence": 0.3,
+    "energy": 0.6,
+    "tempo": "medium"
+  },
+  {
+    "id": 20,
+    "title": "Tavla",
+    "artist": "Mirkelam",
+    "genre": "Pop",
+    "valence": 0.5,
+    "energy": 0.65,
+    "tempo": "medium"
+  },
+  {
+    "id": 21,
+    "title": "Unutulmaz",
+    "artist": "Mirkelam",
+    "genre": "Pop",
+    "valence": -0.4,
+    "energy": 0.4,
     "tempo": "low"
   },
   {
-    "id": 3,
+    "id": 22,
+    "title": "Nothing Else Matters",
+    "artist": "Metallica",
+    "genre": "Metal",
+    "valence": -0.3,
+    "energy": 0.4,
+    "tempo": "low"
+  },
+  {
+    "id": 23,
     "title": "Enter Sandman",
     "artist": "Metallica",
     "genre": "Metal",
@@ -27,21 +90,507 @@
     "tempo": "high"
   },
   {
-    "id": 4,
-    "title": "Weightless",
-    "artist": "Marconi Union",
-    "genre": "Ambient",
+    "id": 24,
+    "title": "Master of Puppets",
+    "artist": "Metallica",
+    "genre": "Metal",
+    "valence": -0.6,
+    "energy": 1.0,
+    "tempo": "high"
+  },
+  {
+    "id": 25,
+    "title": "The Unforgiven",
+    "artist": "Metallica",
+    "genre": "Metal",
+    "valence": -0.7,
+    "energy": 0.5,
+    "tempo": "medium"
+  },
+  {
+    "id": 26,
+    "title": "Paramparça",
+    "artist": "Teoman",
+    "genre": "Rock",
+    "valence": -0.5,
+    "energy": 0.8,
+    "tempo": "high"
+  },
+  {
+    "id": 27,
+    "title": "Renkli Rüyalar Oteli",
+    "artist": "Teoman",
+    "genre": "Rock",
+    "valence": -0.2,
+    "energy": 0.6,
+    "tempo": "medium"
+  },
+  {
+    "id": 30,
+    "title": "Rüyalarda Buruşmuşuz",
+    "artist": "Adamlar",
+    "genre": "Indie Rock",
+    "valence": -0.4,
+    "energy": 0.6,
+    "tempo": "medium"
+  },
+  {
+    "id": 31,
+    "title": "Zombi",
+    "artist": "Adamlar",
+    "genre": "Indie Rock",
+    "valence": -0.2,
+    "energy": 0.7,
+    "tempo": "high"
+  },
+  {
+    "id": 32,
+    "title": "Koca Yaşlı Şişko Dünya",
+    "artist": "Adamlar",
+    "genre": "Indie Rock",
+    "valence": -0.5,
+    "energy": 0.5,
+    "tempo": "medium"
+  },
+  {
+    "id": 33,
+    "title": "Hikaye",
+    "artist": "Adamlar",
+    "genre": "Indie Rock",
     "valence": 0.1,
-    "energy": 0.1,
+    "energy": 0.4,
     "tempo": "low"
   },
   {
-    "id": 5,
-    "title": "Uptown Funk",
-    "artist": "Mark Ronson",
-    "genre": "Funk",
+    "id": 34,
+    "title": "366. Gün",
+    "artist": "Sagopa Kajmer",
+    "genre": "Rap",
+    "valence": -0.8,
+    "energy": 0.6,
+    "tempo": "medium"
+  },
+  {
+    "id": 36,
+    "title": "Baytar",
+    "artist": "Sagopa Kajmer",
+    "genre": "Rap",
+    "valence": -0.6,
+    "energy": 0.7,
+    "tempo": "high"
+  },
+  {
+    "id": 37,
+    "title": "Vasiyet",
+    "artist": "Sagopa Kajmer",
+    "genre": "Rap",
+    "valence": -0.3,
+    "energy": 0.5,
+    "tempo": "low"
+  },
+  {
+    "id": 38,
+    "title": "There Is a Light That Never Goes Out",
+    "artist": "The Smiths",
+    "genre": "Indie Rock",
+    "valence": -0.3,
+    "energy": 0.4,
+    "tempo": "medium"
+  },
+  {
+    "id": 39,
+    "title": "This Charming Man",
+    "artist": "The Smiths",
+    "genre": "Indie Rock",
+    "valence": 0.4,
+    "energy": 0.7,
+    "tempo": "high"
+  },
+  {
+    "id": 40,
+    "title": "Heaven Knows I'm Miserable Now",
+    "artist": "The Smiths",
+    "genre": "Indie Rock",
+    "valence": -0.8,
+    "energy": 0.5,
+    "tempo": "medium"
+  },
+  {
+    "id": 41,
+    "title": "How Soon Is Now?",
+    "artist": "The Smiths",
+    "genre": "Indie Rock",
+    "valence": -0.6,
+    "energy": 0.6,
+    "tempo": "medium"
+  },
+  {
+    "id": 42,
+    "title": "The Less I Know the Better",
+    "artist": "Tame Impala",
+    "genre": "Psychedelic Pop",
+    "valence": 0.5,
+    "energy": 0.6,
+    "tempo": "medium"
+  },
+  {
+    "id": 43,
+    "title": "Let It Happen",
+    "artist": "Tame Impala",
+    "genre": "Psychedelic Rock",
+    "valence": 0.4,
+    "energy": 0.7,
+    "tempo": "medium"
+  },
+  {
+    "id": 45,
+    "title": "Borderline",
+    "artist": "Tame Impala",
+    "genre": "Pop",
+    "valence": 0.6,
+    "energy": 0.6,
+    "tempo": "medium"
+  },
+  {
+    "id": 46,
+    "title": "Küçücüğüm",
+    "artist": "Yalın",
+    "genre": "Pop",
+    "valence": -0.2,
+    "energy": 0.4,
+    "tempo": "low"
+  },
+  {
+    "id": 47,
+    "title": "Zalim",
+    "artist": "Yalın",
+    "genre": "Pop",
+    "valence": -0.6,
+    "energy": 0.5,
+    "tempo": "medium"
+  },
+  {
+    "id": 48,
+    "title": "Ellerine Sağlık",
+    "artist": "Yalın",
+    "genre": "Pop",
+    "valence": 0.7,
+    "energy": 0.6,
+    "tempo": "medium"
+  },
+  {
+    "id": 49,
+    "title": "Ben Bugün",
+    "artist": "Yalın",
+    "genre": "Pop",
+    "valence": 0.5,
+    "energy": 0.55,
+    "tempo": "medium"
+  },
+  {
+    "id": 50,
+    "title": "Çakkıdı",
+    "artist": "Kenan Doğulu",
+    "genre": "Pop",
     "valence": 0.85,
+    "energy": 0.9,
+    "tempo": "high"
+  },
+  {
+    "id": 51,
+    "title": "Tutamıyorum Zamanı",
+    "artist": "Kenan Doğulu",
+    "genre": "Pop",
+    "valence": -0.4,
+    "energy": 0.5,
+    "tempo": "medium"
+  },
+  {
+    "id": 53,
+    "title": "Kandırdım",
+    "artist": "Kenan Doğulu",
+    "genre": "Pop",
+    "valence": -0.5,
+    "energy": 0.6,
+    "tempo": "medium"
+  },
+  {
+    "id": 54,
+    "title": "Buddy Holly",
+    "artist": "Weezer",
+    "genre": "Alternative Rock",
+    "valence": 0.7,
     "energy": 0.8,
+    "tempo": "high"
+  },
+  {
+    "id": 55,
+    "title": "Island in the Sun",
+    "artist": "Weezer",
+    "genre": "Alternative Rock",
+    "valence": 0.8,
+    "energy": 0.6,
+    "tempo": "medium"
+  },
+  {
+    "id": 56,
+    "title": "Say It Ain't So",
+    "artist": "Weezer",
+    "genre": "Alternative Rock",
+    "valence": -0.5,
+    "energy": 0.7,
+    "tempo": "medium"
+  },
+  {
+    "id": 57,
+    "title": "Undone (The Sweater Song)",
+    "artist": "Weezer",
+    "genre": "Alternative Rock",
+    "valence": -0.2,
+    "energy": 0.5,
+    "tempo": "medium"
+  },
+  {
+    "id": 58,
+    "title": "Serzenişte",
+    "artist": "Vega",
+    "genre": "Alternative Rock",
+    "valence": -0.6,
+    "energy": 0.6,
+    "tempo": "medium"
+  },
+  {
+    "id": 59,
+    "title": "Bu Sabahların Bir Anlamı Olmalı",
+    "artist": "Vega",
+    "genre": "Alternative Rock",
+    "valence": -0.4,
+    "energy": 0.5,
+    "tempo": "medium"
+  },
+  {
+    "id": 61,
+    "title": "İz Bırakanlar Unutulmaz",
+    "artist": "Vega",
+    "genre": "Alternative Rock",
+    "valence": 0.3,
+    "energy": 0.5,
+    "tempo": "medium"
+  },
+  {
+    "id": 62,
+    "title": "Sil Baştan",
+    "artist": "Şebnem Ferah",
+    "genre": "Rock",
+    "valence": -0.6,
+    "energy": 0.8,
+    "tempo": "high"
+  },
+  {
+    "id": 64,
+    "title": "Birileri Var",
+    "artist": "Şebnem Ferah",
+    "genre": "Rock",
+    "valence": -0.2,
+    "energy": 0.6,
+    "tempo": "medium"
+  },
+  {
+    "id": 65,
+    "title": "Od",
+    "artist": "Şebnem Ferah",
+    "genre": "Rock",
+    "valence": 0.3,
+    "energy": 0.85,
+    "tempo": "high"
+  },
+  {
+    "id": 66,
+    "title": "Feel Good Inc.",
+    "artist": "Gorillaz",
+    "genre": "Alternative",
+    "valence": 0.4,
+    "energy": 0.7,
+    "tempo": "medium"
+  },
+  {
+    "id": 67,
+    "title": "Clint Eastwood",
+    "artist": "Gorillaz",
+    "genre": "Alternative",
+    "valence": -0.2,
+    "energy": 0.5,
+    "tempo": "medium"
+  },
+  {
+    "id": 69,
+    "title": "DARE",
+    "artist": "Gorillaz",
+    "genre": "Electronic",
+    "valence": 0.8,
+    "energy": 0.9,
+    "tempo": "high"
+  },
+  {
+    "id": 70,
+    "title": "One More Time",
+    "artist": "Daft Punk",
+    "genre": "Electronic",
+    "valence": 0.95,
+    "energy": 0.9,
+    "tempo": "high"
+  },
+  {
+    "id": 71,
+    "title": "Get Lucky",
+    "artist": "Daft Punk",
+    "genre": "Disco",
+    "valence": 0.85,
+    "energy": 0.75,
+    "tempo": "medium"
+  },
+  {
+    "id": 72,
+    "title": "Around the World",
+    "artist": "Daft Punk",
+    "genre": "Electronic",
+    "valence": 0.6,
+    "energy": 0.8,
+    "tempo": "high"
+  },
+  {
+    "id": 73,
+    "title": "Something About Us",
+    "artist": "Daft Punk",
+    "genre": "Electronic",
+    "valence": -0.2,
+    "energy": 0.3,
+    "tempo": "low"
+  },
+  {
+    "id": 74,
+    "title": "Boys Don't Cry",
+    "artist": "The Cure",
+    "genre": "Post-Punk",
+    "valence": 0.5,
+    "energy": 0.7,
+    "tempo": "medium"
+  },
+  {
+    "id": 75,
+    "title": "Lovesong",
+    "artist": "The Cure",
+    "genre": "Gothic Rock",
+    "valence": -0.2,
+    "energy": 0.4,
+    "tempo": "low"
+  },
+  {
+    "id": 76,
+    "title": "Just Like Heaven",
+    "artist": "The Cure",
+    "genre": "Alternative Rock",
+    "valence": 0.7,
+    "energy": 0.6,
+    "tempo": "medium"
+  },
+  {
+    "id": 77,
+    "title": "A Forest",
+    "artist": "The Cure",
+    "genre": "Post-Punk",
+    "valence": -0.7,
+    "energy": 0.5,
+    "tempo": "medium"
+  },
+  {
+    "id": 78,
+    "title": "Last Nite",
+    "artist": "The Strokes",
+    "genre": "Indie Rock",
+    "valence": 0.6,
+    "energy": 0.8,
+    "tempo": "high"
+  },
+  {
+    "id": 79,
+    "title": "Someday",
+    "artist": "The Strokes",
+    "genre": "Indie Rock",
+    "valence": 0.5,
+    "energy": 0.7,
+    "tempo": "medium"
+  },
+  {
+    "id": 80,
+    "title": "Reptilia",
+    "artist": "The Strokes",
+    "genre": "Indie Rock",
+    "valence": -0.1,
+    "energy": 0.9,
+    "tempo": "high"
+  },
+  {
+    "id": 81,
+    "title": "At the Door",
+    "artist": "The Strokes",
+    "genre": "Alternative",
+    "valence": -0.6,
+    "energy": 0.3,
+    "tempo": "low"
+  },
+  {
+    "id": 82,
+    "title": "Şımarık",
+    "artist": "Tarkan",
+    "genre": "Pop",
+    "valence": 0.65,
+    "energy": 0.82,
+    "tempo": "medium"
+  },
+  {
+    "id": 83,
+    "title": "Kuzu Kuzu",
+    "artist": "Tarkan",
+    "genre": "Pop",
+    "valence": 0.7,
+    "energy": 0.85,
+    "tempo": "high"
+  },
+  {
+    "id": 86,
+    "title": "Californication",
+    "artist": "Red Hot Chili Peppers",
+    "genre": "Alternative Rock",
+    "valence": -0.2,
+    "energy": 0.6,
+    "tempo": "medium"
+  },
+  {
+    "id": 87,
+    "title": "By the Way",
+    "artist": "Red Hot Chili Peppers",
+    "genre": "Alternative Rock",
+    "valence": 0.7,
+    "energy": 0.85,
+    "tempo": "high"
+  },
+  {
+    "id": 88,
+    "title": "Under the Bridge",
+    "artist": "Red Hot Chili Peppers",
+    "genre": "Alternative Rock",
+    "valence": -0.6,
+    "energy": 0.4,
+    "tempo": "low"
+  },
+  {
+    "id": 89,
+    "title": "Can't Stop",
+    "artist": "Red Hot Chili Peppers",
+    "genre": "Alternative Rock",
+    "valence": 0.8,
+    "energy": 0.95,
     "tempo": "high"
   }
 ]

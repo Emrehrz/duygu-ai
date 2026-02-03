@@ -1,6 +1,7 @@
 import json
 import random
 import os
+import math
 
 
 class RecommendationEngine:
@@ -13,20 +14,53 @@ class RecommendationEngine:
     def recommend(self, target_valence: float, target_arousal: float, limit=5):
         scored_songs = []
 
+        # for song in self.catalog:
+        #     # 1. Ranking Formula
+        #     # score = 0.45 * (1 - |s.v - u.v|) + 0.35 * (1 - |s.e - u.a|) ...
+
+        #     valence_dist = abs(song["valence"] - target_valence)
+        #     energy_dist = abs(song["energy"] - target_arousal)
+
+        #     # Diversity penalty MVP'de basit tutulabilir veya şimdilik 0 kabul edilebilir.
+        #     # Formülün ana kısmını uygulayalım:
+        #     score = (0.45 * (1 - valence_dist)) + (0.35 * (1 - energy_dist))
+
+        #     # Şarkı objesine skoru ekle (orijinal veriyi bozmadan)
+        #     song_with_score = song.copy()
+        #     song_with_score["score"] = round(score, 2)
+        #     scored_songs.append(song_with_score)
+
         for song in self.catalog:
-            # 1. Ranking Formula
-            # score = 0.45 * (1 - |s.v - u.v|) + 0.35 * (1 - |s.e - u.a|) ...
+            # Şarkının değerleri
+            s_valence = song["valence"]
+            s_energy = song["energy"]
 
-            valence_dist = abs(song["valence"] - target_valence)
-            energy_dist = abs(song["energy"] - target_arousal)
+            # 1. ÖKLİD MESAFESİ (Euclidean Distance)
+            # Hedef nokta ile şarkı arasındaki kuş uçuşu mesafe.
+            # Ne kadar küçükse o kadar iyi.
+            distance = math.sqrt(
+                ((s_valence - target_valence) ** 2) +
+                ((s_energy - target_arousal) ** 2)
+            )
 
-            # Diversity penalty MVP'de basit tutulabilir veya şimdilik 0 kabul edilebilir.
-            # Formülün ana kısmını uygulayalım:
-            score = (0.45 * (1 - valence_dist)) + (0.35 * (1 - energy_dist))
+            # 2. Similarity Score (Mesafeyi Skora Çevirme)
+            # Mesafe 0 ise skor 1 (Tam isabet). Mesafe arttıkça skor düşer.
+            # 1 / (1 + distance) formülü standarttır.
+            similarity = 1 / (1 + distance)
 
-            # Şarkı objesine skoru ekle (orijinal veriyi bozmadan)
+            # --- EKLENTİ: ENERJİ FİLTRESİ (Boost) ---
+            # Eğer kullanıcı ÇOK yüksek enerji istiyorsa (0.8 üstü),
+            # enerjisi düşük şarkıları sertçe cezalandır.
+            if target_arousal > 0.7 and s_energy < 0.6:
+                similarity *= 0.5  # Skoru yarıya indir
+
+            # Eğer kullanıcı ÇOK düşük enerji istiyorsa (0.3 altı),
+            # enerjisi yüksek şarkıları cezalandır.
+            if target_arousal < 0.3 and s_energy > 0.5:
+                similarity *= 0.5
+
             song_with_score = song.copy()
-            song_with_score["score"] = round(score, 2)
+            song_with_score["score"] = similarity
             scored_songs.append(song_with_score)
 
         # Skora göre büyükten küçüğe sırala
