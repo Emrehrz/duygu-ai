@@ -261,6 +261,17 @@ body {
   border-color: #555;
 }
 
+.input-error-text {
+  background-color: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: #ff4d4f;
+  font-size: 0.85rem;
+  margin-top: 6px;
+  text-align: center;
+}
+
 .message-input {
   flex: 1;
   background: transparent;
