@@ -3,12 +3,15 @@ import random
 import os
 import math
 
+from config import settings
+
 
 class RecommendationEngine:
-    def __init__(self, data_path="data/songs.json"):
-        print("Loading recommendation catalog... ", data_path)
+    def __init__(self, data_path: str | None = None):
+        path = data_path or settings.songs_path
+        print("Loading recommendation catalog... ", path)
         # JSON dosyasını yükle
-        with open(data_path, "r", encoding="utf-8") as f:
+        with open(path, "r", encoding="utf-8") as f:
             self.catalog = json.load(f)
 
     def recommend(self, target_valence: float, target_arousal: float, limit=5):

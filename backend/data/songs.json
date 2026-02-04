@@ -6,7 +6,8 @@
     "genre": "Pop",
     "valence": 0.9,
     "energy": 0.95,
-    "tempo": "high"
+    "tempo": "high",
+    "youtube_url": "https://www.youtube.com/results?search_query=%C4%B0smail%20YK%20Bas%20Gaza%20official"
   },
   {
     "id": 15,
@@ -15,7 +16,8 @@
     "genre": "Pop",
     "valence": -0.8,
     "energy": 0.85,
-    "tempo": "high"
+    "tempo": "high",
+    "youtube_url": "https://www.youtube.com/results?search_query=%C4%B0smail%20YK%20Allah%20Belan%C4%B1%20Versin%20official"
   },
   {
     "id": 16,
@@ -24,7 +26,8 @@
     "genre": "Pop",
     "valence": 0.7,
     "energy": 0.9,
-    "tempo": "high"
+    "tempo": "high",
+    "youtube_url": "https://www.youtube.com/results?search_query=%C4%B0smail%20YK%20Bombabomba.com%20official"
   },
   {
     "id": 17,
@@ -33,7 +36,8 @@
     "genre": "Pop",
     "valence": 0.4,
     "energy": 0.8,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=%C4%B0smail%20YK%20Haydi%20Bast%C4%B1r%20official"
   },
   {
     "id": 18,
@@ -42,7 +46,8 @@
     "genre": "Pop",
     "valence": 0.6,
     "energy": 0.7,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Mirkelam%20Her%20Gece%20official"
   },
   {
     "id": 19,
@@ -51,7 +56,8 @@
     "genre": "Pop",
     "valence": 0.3,
     "energy": 0.6,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Mirkelam%20Asuman%20Pansuman%20official"
   },
   {
     "id": 20,
@@ -60,7 +66,8 @@
     "genre": "Pop",
     "valence": 0.5,
     "energy": 0.65,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Mirkelam%20Tavla%20official"
   },
   {
     "id": 21,
@@ -69,7 +76,8 @@
     "genre": "Pop",
     "valence": -0.4,
     "energy": 0.4,
-    "tempo": "low"
+    "tempo": "low",
+    "youtube_url": "https://www.youtube.com/results?search_query=Mirkelam%20Unutulmaz%20official"
   },
   {
     "id": 22,
@@ -78,7 +86,8 @@
     "genre": "Metal",
     "valence": -0.3,
     "energy": 0.4,
-    "tempo": "low"
+    "tempo": "low",
+    "youtube_url": "https://www.youtube.com/results?search_query=Metallica%20Nothing%20Else%20Matters%20official"
   },
   {
     "id": 23,
@@ -87,7 +96,8 @@
     "genre": "Metal",
     "valence": -0.2,
     "energy": 0.9,
-    "tempo": "high"
+    "tempo": "high",
+    "youtube_url": "https://www.youtube.com/results?search_query=Metallica%20Enter%20Sandman%20official"
   },
   {
     "id": 24,
@@ -96,7 +106,8 @@
     "genre": "Metal",
     "valence": -0.6,
     "energy": 1.0,
-    "tempo": "high"
+    "tempo": "high",
+    "youtube_url": "https://www.youtube.com/results?search_query=Metallica%20Master%20of%20Puppets%20official"
   },
   {
     "id": 25,
@@ -105,7 +116,8 @@
     "genre": "Metal",
     "valence": -0.7,
     "energy": 0.5,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Metallica%20The%20Unforgiven%20official"
   },
   {
     "id": 26,
@@ -114,7 +126,8 @@
     "genre": "Rock",
     "valence": -0.5,
     "energy": 0.8,
-    "tempo": "high"
+    "tempo": "high",
+    "youtube_url": "https://www.youtube.com/results?search_query=Teoman%20Parampar%C3%A7a%20official"
   },
   {
     "id": 27,
@@ -123,7 +136,8 @@
     "genre": "Rock",
     "valence": -0.2,
     "energy": 0.6,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Teoman%20Renkli%20R%C3%BCyalar%20Oteli%20official"
   },
   {
     "id": 30,
@@ -132,7 +146,8 @@
     "genre": "Indie Rock",
     "valence": -0.4,
     "energy": 0.6,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Adamlar%20R%C3%BCyalarda%20Buru%C5%9Fmu%C5%9Fuz%20official"
   },
   {
     "id": 31,
@@ -141,7 +156,8 @@
     "genre": "Indie Rock",
     "valence": -0.2,
     "energy": 0.7,
-    "tempo": "high"
+    "tempo": "high",
+    "youtube_url": "https://www.youtube.com/results?search_query=Adamlar%20Zombi%20official"
   },
   {
     "id": 32,
@@ -150,7 +166,8 @@
     "genre": "Indie Rock",
     "valence": -0.5,
     "energy": 0.5,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Adamlar%20Koca%20Ya%C5%9Fl%C4%B1%20%C5%9Ei%C5%9Fko%20D%C3%BCnya%20official"
   },
   {
     "id": 33,
@@ -159,7 +176,8 @@
     "genre": "Indie Rock",
     "valence": 0.1,
     "energy": 0.4,
-    "tempo": "low"
+    "tempo": "low",
+    "youtube_url": "https://www.youtube.com/results?search_query=Adamlar%20Hikaye%20official"
   },
   {
     "id": 34,
@@ -168,7 +186,8 @@
     "genre": "Rap",
     "valence": -0.8,
     "energy": 0.6,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Sagopa%20Kajmer%20366.%20G%C3%BCn%20official"
   },
   {
     "id": 36,
@@ -177,7 +196,8 @@
     "genre": "Rap",
     "valence": -0.6,
     "energy": 0.7,
-    "tempo": "high"
+    "tempo": "high",
+    "youtube_url": "https://www.youtube.com/results?search_query=Sagopa%20Kajmer%20Baytar%20official"
   },
   {
     "id": 37,
@@ -186,7 +206,8 @@
     "genre": "Rap",
     "valence": -0.3,
     "energy": 0.5,
-    "tempo": "low"
+    "tempo": "low",
+    "youtube_url": "https://www.youtube.com/results?search_query=Sagopa%20Kajmer%20Vasiyet%20official"
   },
   {
     "id": 38,
@@ -195,7 +216,8 @@
     "genre": "Indie Rock",
     "valence": -0.3,
     "energy": 0.4,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=The%20Smiths%20There%20Is%20a%20Light%20That%20Never%20Goes%20Out%20official"
   },
   {
     "id": 39,
@@ -204,7 +226,8 @@
     "genre": "Indie Rock",
     "valence": 0.4,
     "energy": 0.7,
-    "tempo": "high"
+    "tempo": "high",
+    "youtube_url": "https://www.youtube.com/results?search_query=The%20Smiths%20This%20Charming%20Man%20official"
   },
   {
     "id": 40,
@@ -213,7 +236,8 @@
     "genre": "Indie Rock",
     "valence": -0.8,
     "energy": 0.5,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=The%20Smiths%20Heaven%20Knows%20I%27m%20Miserable%20Now%20official"
   },
   {
     "id": 41,
@@ -222,7 +246,8 @@
     "genre": "Indie Rock",
     "valence": -0.6,
     "energy": 0.6,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=The%20Smiths%20How%20Soon%20Is%20Now%3F%20official"
   },
   {
     "id": 42,
@@ -231,7 +256,8 @@
     "genre": "Psychedelic Pop",
     "valence": 0.5,
     "energy": 0.6,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Tame%20Impala%20The%20Less%20I%20Know%20the%20Better%20official"
   },
   {
     "id": 43,
@@ -240,7 +266,8 @@
     "genre": "Psychedelic Rock",
     "valence": 0.4,
     "energy": 0.7,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Tame%20Impala%20Let%20It%20Happen%20official"
   },
   {
     "id": 45,
@@ -249,7 +276,8 @@
     "genre": "Pop",
     "valence": 0.6,
     "energy": 0.6,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Tame%20Impala%20Borderline%20official"
   },
   {
     "id": 46,
@@ -258,7 +286,8 @@
     "genre": "Pop",
     "valence": -0.2,
     "energy": 0.4,
-    "tempo": "low"
+    "tempo": "low",
+    "youtube_url": "https://www.youtube.com/results?search_query=Yal%C4%B1n%20K%C3%BC%C3%A7%C3%BCc%C3%BC%C4%9F%C3%BCm%20official"
   },
   {
     "id": 47,
@@ -267,7 +296,8 @@
     "genre": "Pop",
     "valence": -0.6,
     "energy": 0.5,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Yal%C4%B1n%20Zalim%20official"
   },
   {
     "id": 48,
@@ -276,7 +306,8 @@
     "genre": "Pop",
     "valence": 0.7,
     "energy": 0.6,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Yal%C4%B1n%20Ellerine%20Sa%C4%9Fl%C4%B1k%20official"
   },
   {
     "id": 49,
@@ -285,7 +316,8 @@
     "genre": "Pop",
     "valence": 0.5,
     "energy": 0.55,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Yal%C4%B1n%20Ben%20Bug%C3%BCn%20official"
   },
   {
     "id": 50,
@@ -294,7 +326,8 @@
     "genre": "Pop",
     "valence": 0.85,
     "energy": 0.9,
-    "tempo": "high"
+    "tempo": "high",
+    "youtube_url": "https://www.youtube.com/results?search_query=Kenan%20Do%C4%9Fulu%20%C3%87akk%C4%B1d%C4%B1%20official"
   },
   {
     "id": 51,
@@ -303,7 +336,8 @@
     "genre": "Pop",
     "valence": -0.4,
     "energy": 0.5,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Kenan%20Do%C4%9Fulu%20Tutam%C4%B1yorum%20Zaman%C4%B1%20official"
   },
   {
     "id": 53,
@@ -312,7 +346,8 @@
     "genre": "Pop",
     "valence": -0.5,
     "energy": 0.6,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Kenan%20Do%C4%9Fulu%20Kand%C4%B1rd%C4%B1m%20official"
   },
   {
     "id": 54,
@@ -321,7 +356,8 @@
     "genre": "Alternative Rock",
     "valence": 0.7,
     "energy": 0.8,
-    "tempo": "high"
+    "tempo": "high",
+    "youtube_url": "https://www.youtube.com/results?search_query=Weezer%20Buddy%20Holly%20official"
   },
   {
     "id": 55,
@@ -330,7 +366,8 @@
     "genre": "Alternative Rock",
     "valence": 0.8,
     "energy": 0.6,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Weezer%20Island%20in%20the%20Sun%20official"
   },
   {
     "id": 56,
@@ -339,7 +376,8 @@
     "genre": "Alternative Rock",
     "valence": -0.5,
     "energy": 0.7,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Weezer%20Say%20It%20Ain%27t%20So%20official"
   },
   {
     "id": 57,
@@ -348,7 +386,8 @@
     "genre": "Alternative Rock",
     "valence": -0.2,
     "energy": 0.5,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Weezer%20Undone%20%28The%20Sweater%20Song%29%20official"
   },
   {
     "id": 58,
@@ -357,7 +396,8 @@
     "genre": "Alternative Rock",
     "valence": -0.6,
     "energy": 0.6,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Vega%20Serzeni%C5%9Fte%20official"
   },
   {
     "id": 59,
@@ -366,7 +406,8 @@
     "genre": "Alternative Rock",
     "valence": -0.4,
     "energy": 0.5,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Vega%20Bu%20Sabahlar%C4%B1n%20Bir%20Anlam%C4%B1%20Olmal%C4%B1%20official"
   },
   {
     "id": 61,
@@ -375,7 +416,8 @@
     "genre": "Alternative Rock",
     "valence": 0.3,
     "energy": 0.5,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Vega%20%C4%B0z%20B%C4%B1rakanlar%20Unutulmaz%20official"
   },
   {
     "id": 62,
@@ -384,7 +426,8 @@
     "genre": "Rock",
     "valence": -0.6,
     "energy": 0.8,
-    "tempo": "high"
+    "tempo": "high",
+    "youtube_url": "https://www.youtube.com/results?search_query=%C5%9Eebnem%20Ferah%20Sil%20Ba%C5%9Ftan%20official"
   },
   {
     "id": 64,
@@ -393,7 +436,8 @@
     "genre": "Rock",
     "valence": -0.2,
     "energy": 0.6,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=%C5%9Eebnem%20Ferah%20Birileri%20Var%20official"
   },
   {
     "id": 65,
@@ -402,7 +446,8 @@
     "genre": "Rock",
     "valence": 0.3,
     "energy": 0.85,
-    "tempo": "high"
+    "tempo": "high",
+    "youtube_url": "https://www.youtube.com/results?search_query=%C5%9Eebnem%20Ferah%20Od%20official"
   },
   {
     "id": 66,
@@ -411,7 +456,8 @@
     "genre": "Alternative",
     "valence": 0.4,
     "energy": 0.7,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Gorillaz%20Feel%20Good%20Inc.%20official"
   },
   {
     "id": 67,
@@ -420,7 +466,8 @@
     "genre": "Alternative",
     "valence": -0.2,
     "energy": 0.5,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Gorillaz%20Clint%20Eastwood%20official"
   },
   {
     "id": 69,
@@ -429,7 +476,8 @@
     "genre": "Electronic",
     "valence": 0.8,
     "energy": 0.9,
-    "tempo": "high"
+    "tempo": "high",
+    "youtube_url": "https://www.youtube.com/results?search_query=Gorillaz%20DARE%20official"
   },
   {
     "id": 70,
@@ -438,7 +486,8 @@
     "genre": "Electronic",
     "valence": 0.95,
     "energy": 0.9,
-    "tempo": "high"
+    "tempo": "high",
+    "youtube_url": "https://www.youtube.com/results?search_query=Daft%20Punk%20One%20More%20Time%20official"
   },
   {
     "id": 71,
@@ -447,7 +496,8 @@
     "genre": "Disco",
     "valence": 0.85,
     "energy": 0.75,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Daft%20Punk%20Get%20Lucky%20official"
   },
   {
     "id": 72,
@@ -456,7 +506,8 @@
     "genre": "Electronic",
     "valence": 0.6,
     "energy": 0.8,
-    "tempo": "high"
+    "tempo": "high",
+    "youtube_url": "https://www.youtube.com/results?search_query=Daft%20Punk%20Around%20the%20World%20official"
   },
   {
     "id": 73,
@@ -465,7 +516,8 @@
     "genre": "Electronic",
     "valence": -0.2,
     "energy": 0.3,
-    "tempo": "low"
+    "tempo": "low",
+    "youtube_url": "https://www.youtube.com/results?search_query=Daft%20Punk%20Something%20About%20Us%20official"
   },
   {
     "id": 74,
@@ -474,7 +526,8 @@
     "genre": "Post-Punk",
     "valence": 0.5,
     "energy": 0.7,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=The%20Cure%20Boys%20Don%27t%20Cry%20official"
   },
   {
     "id": 75,
@@ -483,7 +536,8 @@
     "genre": "Gothic Rock",
     "valence": -0.2,
     "energy": 0.4,
-    "tempo": "low"
+    "tempo": "low",
+    "youtube_url": "https://www.youtube.com/results?search_query=The%20Cure%20Lovesong%20official"
   },
   {
     "id": 76,
@@ -492,7 +546,8 @@
     "genre": "Alternative Rock",
     "valence": 0.7,
     "energy": 0.6,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=The%20Cure%20Just%20Like%20Heaven%20official"
   },
   {
     "id": 77,
@@ -501,7 +556,8 @@
     "genre": "Post-Punk",
     "valence": -0.7,
     "energy": 0.5,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=The%20Cure%20A%20Forest%20official"
   },
   {
     "id": 78,
@@ -510,7 +566,8 @@
     "genre": "Indie Rock",
     "valence": 0.6,
     "energy": 0.8,
-    "tempo": "high"
+    "tempo": "high",
+    "youtube_url": "https://www.youtube.com/results?search_query=The%20Strokes%20Last%20Nite%20official"
   },
   {
     "id": 79,
@@ -519,7 +576,8 @@
     "genre": "Indie Rock",
     "valence": 0.5,
     "energy": 0.7,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=The%20Strokes%20Someday%20official"
   },
   {
     "id": 80,
@@ -528,7 +586,8 @@
     "genre": "Indie Rock",
     "valence": -0.1,
     "energy": 0.9,
-    "tempo": "high"
+    "tempo": "high",
+    "youtube_url": "https://www.youtube.com/results?search_query=The%20Strokes%20Reptilia%20official"
   },
   {
     "id": 81,
@@ -537,7 +596,8 @@
     "genre": "Alternative",
     "valence": -0.6,
     "energy": 0.3,
-    "tempo": "low"
+    "tempo": "low",
+    "youtube_url": "https://www.youtube.com/results?search_query=The%20Strokes%20At%20the%20Door%20official"
   },
   {
     "id": 82,
@@ -546,7 +606,8 @@
     "genre": "Pop",
     "valence": 0.65,
     "energy": 0.82,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Tarkan%20%C5%9E%C4%B1mar%C4%B1k%20official"
   },
   {
     "id": 83,
@@ -555,7 +616,8 @@
     "genre": "Pop",
     "valence": 0.7,
     "energy": 0.85,
-    "tempo": "high"
+    "tempo": "high",
+    "youtube_url": "https://www.youtube.com/results?search_query=Tarkan%20Kuzu%20Kuzu%20official"
   },
   {
     "id": 86,
@@ -564,7 +626,8 @@
     "genre": "Alternative Rock",
     "valence": -0.2,
     "energy": 0.6,
-    "tempo": "medium"
+    "tempo": "medium",
+    "youtube_url": "https://www.youtube.com/results?search_query=Red%20Hot%20Chili%20Peppers%20Californication%20official"
   },
   {
     "id": 87,
@@ -573,7 +636,8 @@
     "genre": "Alternative Rock",
     "valence": 0.7,
     "energy": 0.85,
-    "tempo": "high"
+    "tempo": "high",
+    "youtube_url": "https://www.youtube.com/results?search_query=Red%20Hot%20Chili%20Peppers%20By%20the%20Way%20official"
   },
   {
     "id": 88,
@@ -582,7 +646,8 @@
     "genre": "Alternative Rock",
     "valence": -0.6,
     "energy": 0.4,
-    "tempo": "low"
+    "tempo": "low",
+    "youtube_url": "https://www.youtube.com/results?search_query=Red%20Hot%20Chili%20Peppers%20Under%20the%20Bridge%20official"
   },
   {
     "id": 89,
@@ -591,6 +656,7 @@
     "genre": "Alternative Rock",
     "valence": 0.8,
     "energy": 0.95,
-    "tempo": "high"
+    "tempo": "high",
+    "youtube_url": "https://www.youtube.com/results?search_query=Red%20Hot%20Chili%20Peppers%20Can%27t%20Stop%20official"
   }
 ]

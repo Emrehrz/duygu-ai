@@ -3,7 +3,8 @@
 :root {
   --primary: #ffffff;
   --secondary: #888888;
-  --accent: #3b82f6; /* Modern mavi */
+  --accent: #3b82f6;
+  /* Modern mavi */
   --glass-bg: rgba(255, 255, 255, 0.08);
   --glass-border: rgba(255, 255, 255, 0.1);
   --input-bg: rgba(30, 30, 30, 0.8);
@@ -12,8 +13,9 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  color: var(--primary); /* Bu renk beyaz (#ffffff) */
- background-color: #0B192C; 
+  color: var(--primary);
+  /* Bu renk beyaz (#ffffff) */
+  background-color: #0B192C;
   overflow: hidden;
 }
 
@@ -42,7 +44,8 @@ body {
 
 /* Sohbet başlayınca içerik yukarı kayar ve yayılır */
 .app.chat-active .content-wrapper {
-  justify-content: flex-end; /* Input en alta iner */
+  justify-content: flex-end;
+  /* Input en alta iner */
   height: 100%;
   padding-bottom: 20px;
 }
@@ -56,7 +59,8 @@ body {
 
 /* Sohbet başlayınca logo küçülür ve yukarı gider veya kaybolur */
 .app.chat-active .welcome-container {
-  display: none; /* Grok tarzı: sohbet başlayınca logo gider */
+  display: none;
+  /* Grok tarzı: sohbet başlayınca logo gider */
 }
 
 .logo {
@@ -81,10 +85,12 @@ body {
   width: 100%;
   overflow-y: auto;
   padding: 20px 0;
-  display: none; /* Başlangıçta gizli */
+  display: none;
+  /* Başlangıçta gizli */
   flex-direction: column;
   gap: 24px;
-  mask-image: linear-gradient(to bottom, transparent, black 5%, black 95%, transparent); /* Üst ve alttan yumuşak geçiş */
+  mask-image: linear-gradient(to bottom, transparent, black 5%, black 95%, transparent);
+  /* Üst ve alttan yumuşak geçiş */
 }
 
 .app.chat-active .messages-container {
@@ -93,11 +99,15 @@ body {
 
 /* Scrollbar Gizleme (Temiz görünüm için) */
 .messages-container::-webkit-scrollbar {
-  display: none; /* Scrollbar'ı tamamen gizle */
+  display: none;
+  /* Scrollbar'ı tamamen gizle */
 }
+
 .messages-container {
-  -ms-overflow-style: none; /* IE ve Edge için */
-  scrollbar-width: none; /* Firefox için */
+  -ms-overflow-style: none;
+  /* IE ve Edge için */
+  scrollbar-width: none;
+  /* Firefox için */
 }
 
 .message {
@@ -127,8 +137,15 @@ body {
   flex-shrink: 0;
 }
 
-.message.user .avatar { background: #333; color: #fff; }
-.message.assistant .avatar { background: var(--accent); color: #fff; }
+.message.user .avatar {
+  background: #333;
+  color: #fff;
+}
+
+.message.assistant .avatar {
+  background: var(--accent);
+  color: #fff;
+}
 
 .message-content {
   display: flex;
@@ -190,9 +207,33 @@ body {
   justify-content: center;
 }
 
-.track-info h4 { margin: 0; font-size: 0.9rem; font-weight: 500; }
-.track-info p { margin: 2px 0 0; font-size: 0.8rem; color: #888; }
-.track-score { font-size: 0.75rem; color: var(--accent); margin-left: auto; }
+.track-info h4 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.track-info p {
+  margin: 2px 0 0;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.track-link {
+  color: var(--accent);
+  margin-left: auto;
+  width: 24px;
+  height: 24px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.track-link:hover {
+  color: #FF6500;
+  transition-duration: 20ms;
+}
 
 /* --- Input Area --- */
 .input-wrapper {
@@ -205,10 +246,12 @@ body {
 .input-container {
   background: var(--input-bg);
   border: 1px solid #333;
-  border-radius: 16px; /* Grok tarzı yuvarlatılmış */
+  border-radius: 16px;
+  /* Grok tarzı yuvarlatılmış */
   padding: 14px;
   display: flex;
-  align-items: flex-end; /* Multiline desteği için */
+  align-items: flex-end;
+  /* Multiline desteği için */
   gap: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   transition: border-color 0.3s;
@@ -245,25 +288,41 @@ body {
   transition: transform 0.2s, opacity 0.2s;
 }
 
-.send-button:hover { transform: scale(1.1); }
-.send-button:disabled { opacity: 0.5; transform: scale(1); }
+.send-button:hover {
+  transform: scale(1.1);
+}
+
+.send-button:disabled {
+  opacity: 0.5;
+  transform: scale(1);
+}
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* --- LIGHT RAYS DÜZELTMESİ --- */
 
 /* 1. Arka planı zorla en arkaya ve sabite al */
 .light-rays-container {
-  position: fixed !important; /* Sayfa akışından çıkar, ekrana çivile */
+  position: fixed !important;
+  /* Sayfa akışından çıkar, ekrana çivile */
   top: 0;
   left: 0;
   width: 100vw !important;
   height: 100vh !important;
-  z-index: 0 !important; /* En arkaya gönder (ama -1 yapma, görünmeyebilir) */
-  pointer-events: none; /* Tıklamalar arkaya geçsin */
+  z-index: 0 !important;
+  /* En arkaya gönder (ama -1 yapma, görünmeyebilir) */
+  pointer-events: none;
+  /* Tıklamalar arkaya geçsin */
 }
 
 /* 2. Canvas'ın tam oturduğundan emin ol */
@@ -276,8 +335,10 @@ body {
 /* 3. Uygulamanın kendisini öne getir */
 .app {
   position: relative;
-  z-index: 10; /* Arka plandan daha yüksek olmalı */
-  background: transparent; /* Arka planı görmemize izin ver */
+  z-index: 10;
+  /* Arka plandan daha yüksek olmalı */
+  background: transparent;
+  /* Arka planı görmemize izin ver */
   min-height: 100vh;
 }
 

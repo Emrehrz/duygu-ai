@@ -12,13 +12,16 @@ const TrackCard = ({ track }) => (
       <h4>{track.title}</h4>
       <p>{track.artist}</p>
     </div>
-    <div className="track-score">%{Math.round(track.score * 100)}</div>
+    <a className="track-link" href={track.youtube_url} target="_blank" rel="noopener noreferrer">
+      ▶
+    </a>
   </div>
 );
 
 function App() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
+  const [inputError, setInputError] = useState(''); // Yeni state: input hatası
   const [isLoading, setIsLoading] = useState(false);
   const [hasStarted, setHasStarted] = useState(false); // UI Durumu
   const messagesEndRef = useRef(null);
@@ -27,13 +30,38 @@ function App() {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const translateEmotion = (emotion) => {
+    const translations = {
+      happy: "mutlu",
+      sad: "üzgün",
+      calm: "sakin",
+      energetic: "enerjik",
+      lonely: "yalnız"
+    };
+    return translations[emotion] || emotion;
+  };
+
   useEffect(() => {
     scrollToBottom();
   }, [messages, isLoading]);
 
   const sendMessage = async (e) => {
     e.preventDefault();
-    if (!input.trim() || isLoading) return;
+    const trimmed = input.trim();
+    if (!trimmed || isLoading) return;
+
+    // uzunluk kontrolü
+    if (trimmed.length < 5) {
+      setInputError('Az bir şey daha uzun olsun (min 5 karakter).');
+      return;
+    }
+    if (trimmed.length > 80) {
+      setInputError('Bence bir cümle için 80 karakter yeterli.');
+      return;
+    }
+    if (!trimmed || isLoading) return;
+
+    setInputError(''); // valid ise hatayı temizle
 
     // İlk mesaj atıldığında UI değişsin
     if (!hasStarted) setHasStarted(true);
@@ -53,17 +81,42 @@ function App() {
     try {
       // 1. Analiz
       const analysisData = await analyzeMessage(userContent, messages);
-      console.log("this is analysisData", analysisData);
+      // console.log("this is analysisData", analysisData);
+
+      // Rate Limit Kontrolü: Backend'den hata objesi döndüyse yakala
+      if (analysisData.error && analysisData.error.code === "RATE_LIMITED") {
+        setMessages(prev => [...prev, {
+          role: 'assistant',
+          type: 'text',
+          content: analysisData.error.detail,
+          timestamp: new Date().toISOString()
+        }]);
+        return; // Akışı durdur (öneri yapmaya çalışma)
+      }
+
       const assistantAnalysisMsg = {
         role: 'assistant',
         type: 'text',
-        content: `Sizi ${analysisData.emotion} hissettiren bir durum sezdim. (Güven: %${Math.round(analysisData.confidence * 100)})`,
+        content: `Sizi ${translateEmotion(analysisData.emotion)} hissettiren bir durum sezdim. (Güven: %${Math.round(analysisData.data.confidence * 100)})`,
         timestamp: new Date().toISOString()
       };
+
+           // tekrarlayan text ise donen mesaj net olsun ve oneri yapmasin
+      if(analysisData.confidence ==1){
+        const repeatMsg = {
+          role: 'assistant',
+          type: 'text',
+          content: `Kendinizi ifade etme şekliniz bu mu gerçekten?`,
+          timestamp: new Date().toISOString()
+        };
+        setMessages(prev => [...prev, repeatMsg]);
+        return; // öneri yapmadan çık
+      } 
+      
       setMessages(prev => [...prev, assistantAnalysisMsg]);
 
       // 2. Öneri
-      const recommendRequest = { valence: analysisData.valence, arousal: analysisData.arousal };
+      const recommendRequest = { valence: analysisData.data.valence, arousal: analysisData.data.arousal };
       const recommendation = await getRecommendations(recommendRequest);
 
       const playlistMsg = {
@@ -75,17 +128,24 @@ function App() {
       setMessages(prev => [...prev, playlistMsg]);
 
     } catch (error) {
-      console.error(error);
+      console.error("xxx", error.detail);
+
+      const fallback =
+        (typeof error === 'string' && error) ||
+        error?.detail ||
+        error?.message ||
+        'Şu an bir sorun var, tekrar dener misin?';
+
       setMessages(prev => [...prev, {
         role: 'assistant',
         type: 'text',
-        content: "Üzgünüm, bir bağlantı hatası oluştu.",
+        content: fallback,
         timestamp: new Date().toISOString()
       }]);
-    } finally {
+    }finally {
       setIsLoading(false);
     }
-  };
+  }
 
   return (
       <div className={`app ${hasStarted ? 'chat-active' : ''}`} >
@@ -152,7 +212,7 @@ function App() {
             <form className="input-container" onSubmit={sendMessage}>
               <input
                 className="message-input"
-                placeholder="Örn: İşten yeni geldim ve biraz yorgunum."
+                placeholder="İçim kıpır kıpır..."
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 disabled={isLoading}
@@ -162,6 +222,11 @@ function App() {
                 ➤
               </button>
             </form>
+              {inputError && (
+          <div className="input-error-text">
+            {inputError}
+          </div>
+        )}
           </div>
 
         </div>

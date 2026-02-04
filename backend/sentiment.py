@@ -2,13 +2,14 @@ from sentence_transformers import SentenceTransformer, util
 import torch
 import torch.nn.functional as F
 
+from config import settings
+
 
 class SentimentEngine:
     def __init__(self):
         # CPU-only inference
         print("Loading sentiment model...")
-        self.model = SentenceTransformer(
-            'sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2')
+        self.model = SentenceTransformer(settings.sentiment_model_name)
 
         # emotion anchors
         # GÜNCELLENMİŞ EYLEM ODAKLI ANCHORLAR
@@ -41,6 +42,14 @@ class SentimentEngine:
         self.anchor_embeddings = self._compute_anchor_embeddings()
         print("Model ve anchorlar hazir")
 
+    def _is_repetitive(self, text: str) -> bool:
+        # Basit tekrar kontrolü: Metindeki karakterlerin %80'inden fazlası aynı mı?
+        if len(text) == 0:
+            return False
+        most_common_char = max(set(text), key=text.count)
+        repetition_ratio = text.count(most_common_char) / len(text)
+        return repetition_ratio > 0.4
+
     def _compute_anchor_embeddings(self):
         embeddings = {}
         for emotion, text in self.anchors.items():
@@ -49,6 +58,16 @@ class SentimentEngine:
         return embeddings
 
     def analyze(self, user_text: str):
+        # Tekrarlayan metin kontrolü
+        if self._is_repetitive(user_text):
+            return {
+                "valence": 0.0,
+                "arousal": 0.0,
+                "confidence": 1.0,
+                "emotion": "neutral",
+                "provider": "local"
+            }
+
         # 1. Kullanıcı metnini embedding'e çevir
         user_embedding = self.model.encode(user_text, convert_to_tensor=True)
 
