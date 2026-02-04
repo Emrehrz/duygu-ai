@@ -13,11 +13,13 @@ Duygu AI, React tabanlı bir frontend ve FastAPI tabanlı bir backend kullanan, 
 ## 🛠️ Teknoloji Yığını
 
 **Frontend**
+
 - React 18
 - Vite
 - Modern CSS / animasyonlu arayüz
 
 **Backend**
+
 - FastAPI
 - Python 3.8+
 - Uvicorn
@@ -28,8 +30,8 @@ Duygu AI, React tabanlı bir frontend ve FastAPI tabanlı bir backend kullanan, 
 - Backend, JSON tabanlı HTTP API sağlar (FastAPI).
 - Frontend, kullanıcı mesajlarını backend'e gönderir; backend bu mesajları işler ve AI cevabını geri döndürür.
 - Geliştirme sırasında servisler ayrı portlarda çalışır:
-  - Backend: `http://localhost:8000`
-  - Frontend: `http://localhost:5173`
+   - Backend: `http://localhost:8000`
+   - Frontend: `http://localhost:5173`
 
 ## 📦 Kurulum ve Çalıştırma
 
@@ -102,10 +104,11 @@ Backend ve frontend tarafında, kullanmak istediğiniz AI servislerine göre baz
 Örnek yaklaşım (öneri):
 
 - Backend: `.env` dosyasında
-  - `AI_API_KEY=...`
-  - `AI_API_BASE_URL=...`
+   - `AI_API_KEY=...`
+   - `AI_API_BASE_URL=...`
+
 - Frontend: `.env` dosyasında
-  - `VITE_API_BASE_URL=http://localhost:8000`
+   - `VITE_API_BASE_URL=http://localhost:8000`
 
 Gerçek projede kullandığınız değişkenleri backend ve frontend README dosyalarında daha detaylı tanımlayabilirsiniz.
 
@@ -147,10 +150,11 @@ duygu-ai/
 Projeyi production ortamına almak için tipik yaklaşımlar:
 
 - Backend için:
-  - Uvicorn/Gunicorn ile FastAPI uygulamasını bir reverse proxy (NGINX vb.) arkasında çalıştırmak
+   - Uvicorn/Gunicorn ile FastAPI uygulamasını bir reverse proxy (NGINX vb.) arkasında çalıştırmak
+
 - Frontend için:
-  - `npm run build` ile statik dosyaları üretmek
-  - Üretilen build çıktısını bir statik dosya sunucusunda (NGINX, CDN, vb.) barındırmak
+   - `npm run build` ile statik dosyaları üretmek
+   - Üretilen build çıktısını bir statik dosya sunucusunda (NGINX, CDN, vb.) barındırmak
 
 Detaylı deployment adımlarını kendi hedef ortamınıza göre backend ve frontend README dosyalarında özelleştirebilirsiniz.
 
