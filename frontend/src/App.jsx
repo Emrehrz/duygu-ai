@@ -97,7 +97,7 @@ function App() {
       const assistantAnalysisMsg = {
         role: 'assistant',
         type: 'text',
-        content: `Sizi ${translateEmotion(analysisData.emotion)} hissettiren bir durum sezdim. (Güven: %${Math.round(analysisData.data.confidence * 100)})`,
+        content: `Sizi ${translateEmotion(analysisData.data.emotion)} hissettiren bir durum sezdim. (Güven: %${Math.round(analysisData.data.confidence * 100)})`,
         timestamp: new Date().toISOString()
       };
 

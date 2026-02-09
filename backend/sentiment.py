@@ -18,12 +18,8 @@ class SentimentEngine:
 
             "sad": "İçimde derin bir hüzün var, moralim çok bozuk, ağlamaklı, kederliyim ve mutsuzum",
 
-            # CALM: "Yorgunluk" ve "Rahatlama" kelimelerini buraya sahiplendiriyoruz.
-            # Böylece "işten geldim yorgunum" diyen buraya düşecek.
             "calm": "Sakinleşmek, dinlenmek, yorgunluğumu atmak, huzur bulmak, sessizlik, gevşemek, acelem yok, rahatlamak, uzanmak",
 
-            # ENERGETIC: "Uyku" kelimesini tamamen siliyoruz.
-            # Sadece SAF HAREKET ve EYLEM kelimeleri bırakıyoruz.
             "energetic": "Enerji doluyum, yerimde duramıyorum, dans etmek, koşmak, zıplamak, çok hareketliyim, tempo istiyorum, modum yüksek, fişek gibiyim",
 
             "lonely": "Kimsesizim, terk edilmiş gibi hissediyorum, yanımda birini arıyorum ama yok, dışlanmışım, yalnızım"
