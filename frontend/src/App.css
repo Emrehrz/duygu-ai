@@ -23,7 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  height: 100dvh;
+  height: 100svh;
   position: relative;
 }
 
@@ -248,6 +248,8 @@ body {
 }
 
 /* --- Mobile fixes --- */
+/* ...existing code... */
+
 @media (max-width: 640px) {
   .content-wrapper {
     max-width: 100%;
@@ -265,11 +267,20 @@ body {
     z-index: 20;
   }
 
-    .messages-container {
-      padding: 8vh 0 160px;
-      /* Mobilde daha fazla boşluk */
-    }
+  .messages-container {
+    overflow-y: auto ;
+    padding: calc(20vh + env(safe-area-inset-top)) 0 140px;
+    /* Mobilde daha kontrollü üst boşluk */
+    mask-image: none;
+  }
+
+  .app.chat-active .content-wrapper {
+    height: 100svh;
+    padding-bottom: 0;
+  }
 }
+
+/* ...existing code... */
 
 .input-container {
   background: var(--input-bg);
