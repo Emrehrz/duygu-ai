@@ -16,7 +16,7 @@ class Settings(BaseSettings):
     min_input_length: int = Field(default=5)
 
     # rate limit ayarları
-    rate_limit: int = Field(default=10, description="Requests per window")
+    rate_limit: int = Field(default=3, description="Requests per window")
     rate_limit_window: int = Field(default=60, description="Window in seconds")
 
     # CORS

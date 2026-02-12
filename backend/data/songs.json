@@ -4,8 +4,8 @@
     "title": "Bas Gaza",
     "artist": "İsmail YK",
     "genre": "Pop",
-    "valence": 0.9,
-    "energy": 0.95,
+    "valence": 0.85,
+    "energy": 0.9,
     "tempo": "high",
     "youtube_url": "https://www.youtube.com/results?search_query=%C4%B0smail%20YK%20Bas%20Gaza%20official"
   },
@@ -64,8 +64,8 @@
     "title": "Tavla",
     "artist": "Mirkelam",
     "genre": "Pop",
-    "valence": 0.5,
-    "energy": 0.65,
+    "valence": 0.43,
+    "energy": 0.6,
     "tempo": "medium",
     "youtube_url": "https://www.youtube.com/results?search_query=Mirkelam%20Tavla%20official"
   },
@@ -84,8 +84,8 @@
     "title": "Nothing Else Matters",
     "artist": "Metallica",
     "genre": "Metal",
-    "valence": -0.3,
-    "energy": 0.4,
+    "valence": -0.35,
+    "energy": 0.35,
     "tempo": "low",
     "youtube_url": "https://www.youtube.com/results?search_query=Metallica%20Nothing%20Else%20Matters%20official"
   },
@@ -110,16 +110,6 @@
     "youtube_url": "https://www.youtube.com/results?search_query=Metallica%20Master%20of%20Puppets%20official"
   },
   {
-    "id": 25,
-    "title": "The Unforgiven",
-    "artist": "Metallica",
-    "genre": "Metal",
-    "valence": -0.7,
-    "energy": 0.5,
-    "tempo": "medium",
-    "youtube_url": "https://www.youtube.com/results?search_query=Metallica%20The%20Unforgiven%20official"
-  },
-  {
     "id": 26,
     "title": "Paramparça",
     "artist": "Teoman",
@@ -134,20 +124,10 @@
     "title": "Renkli Rüyalar Oteli",
     "artist": "Teoman",
     "genre": "Rock",
-    "valence": -0.2,
-    "energy": 0.6,
+    "valence": -0.25,
+    "energy": 0.55,
     "tempo": "medium",
     "youtube_url": "https://www.youtube.com/results?search_query=Teoman%20Renkli%20R%C3%BCyalar%20Oteli%20official"
-  },
-  {
-    "id": 30,
-    "title": "Rüyalarda Buruşmuşuz",
-    "artist": "Adamlar",
-    "genre": "Indie Rock",
-    "valence": -0.4,
-    "energy": 0.6,
-    "tempo": "medium",
-    "youtube_url": "https://www.youtube.com/results?search_query=Adamlar%20R%C3%BCyalarda%20Buru%C5%9Fmu%C5%9Fuz%20official"
   },
   {
     "id": 31,
@@ -214,8 +194,8 @@
     "title": "There Is a Light That Never Goes Out",
     "artist": "The Smiths",
     "genre": "Indie Rock",
-    "valence": -0.3,
-    "energy": 0.4,
+    "valence": -0.34,
+    "energy": 0.35,
     "tempo": "medium",
     "youtube_url": "https://www.youtube.com/results?search_query=The%20Smiths%20There%20Is%20a%20Light%20That%20Never%20Goes%20Out%20official"
   },
@@ -224,8 +204,8 @@
     "title": "This Charming Man",
     "artist": "The Smiths",
     "genre": "Indie Rock",
-    "valence": 0.4,
-    "energy": 0.7,
+    "valence": 0.35,
+    "energy": 0.75,
     "tempo": "high",
     "youtube_url": "https://www.youtube.com/results?search_query=The%20Smiths%20This%20Charming%20Man%20official"
   },
@@ -238,16 +218,6 @@
     "energy": 0.5,
     "tempo": "medium",
     "youtube_url": "https://www.youtube.com/results?search_query=The%20Smiths%20Heaven%20Knows%20I%27m%20Miserable%20Now%20official"
-  },
-  {
-    "id": 41,
-    "title": "How Soon Is Now?",
-    "artist": "The Smiths",
-    "genre": "Indie Rock",
-    "valence": -0.6,
-    "energy": 0.6,
-    "tempo": "medium",
-    "youtube_url": "https://www.youtube.com/results?search_query=The%20Smiths%20How%20Soon%20Is%20Now%3F%20official"
   },
   {
     "id": 42,
@@ -264,8 +234,8 @@
     "title": "Let It Happen",
     "artist": "Tame Impala",
     "genre": "Psychedelic Rock",
-    "valence": 0.4,
-    "energy": 0.7,
+    "valence": 0.35,
+    "energy": 0.65,
     "tempo": "medium",
     "youtube_url": "https://www.youtube.com/results?search_query=Tame%20Impala%20Let%20It%20Happen%20official"
   },
@@ -284,8 +254,8 @@
     "title": "Küçücüğüm",
     "artist": "Yalın",
     "genre": "Pop",
-    "valence": -0.2,
-    "energy": 0.4,
+    "valence": -0.25,
+    "energy": 0.35,
     "tempo": "low",
     "youtube_url": "https://www.youtube.com/results?search_query=Yal%C4%B1n%20K%C3%BC%C3%A7%C3%BCc%C3%BC%C4%9F%C3%BCm%20official"
   },
@@ -304,58 +274,28 @@
     "title": "Ellerine Sağlık",
     "artist": "Yalın",
     "genre": "Pop",
-    "valence": 0.7,
-    "energy": 0.6,
-    "tempo": "medium",
-    "youtube_url": "https://www.youtube.com/results?search_query=Yal%C4%B1n%20Ellerine%20Sa%C4%9Fl%C4%B1k%20official"
-  },
-  {
-    "id": 49,
-    "title": "Ben Bugün",
-    "artist": "Yalın",
-    "genre": "Pop",
-    "valence": 0.5,
+    "valence": 0.65,
     "energy": 0.55,
     "tempo": "medium",
-    "youtube_url": "https://www.youtube.com/results?search_query=Yal%C4%B1n%20Ben%20Bug%C3%BCn%20official"
-  },
-  {
-    "id": 50,
-    "title": "Çakkıdı",
-    "artist": "Kenan Doğulu",
-    "genre": "Pop",
-    "valence": 0.85,
-    "energy": 0.9,
-    "tempo": "high",
-    "youtube_url": "https://www.youtube.com/results?search_query=Kenan%20Do%C4%9Fulu%20%C3%87akk%C4%B1d%C4%B1%20official"
+    "youtube_url": "https://www.youtube.com/results?search_query=Yal%C4%B1n%20Ellerine%20Sa%C4%9Fl%C4%B1k%20official"
   },
   {
     "id": 51,
     "title": "Tutamıyorum Zamanı",
     "artist": "Kenan Doğulu",
     "genre": "Pop",
-    "valence": -0.4,
-    "energy": 0.5,
+    "valence": -0.46,
+    "energy": 0.43,
     "tempo": "medium",
     "youtube_url": "https://www.youtube.com/results?search_query=Kenan%20Do%C4%9Fulu%20Tutam%C4%B1yorum%20Zaman%C4%B1%20official"
-  },
-  {
-    "id": 53,
-    "title": "Kandırdım",
-    "artist": "Kenan Doğulu",
-    "genre": "Pop",
-    "valence": -0.5,
-    "energy": 0.6,
-    "tempo": "medium",
-    "youtube_url": "https://www.youtube.com/results?search_query=Kenan%20Do%C4%9Fulu%20Kand%C4%B1rd%C4%B1m%20official"
   },
   {
     "id": 54,
     "title": "Buddy Holly",
     "artist": "Weezer",
     "genre": "Alternative Rock",
-    "valence": 0.7,
-    "energy": 0.8,
+    "valence": 0.75,
+    "energy": 0.75,
     "tempo": "high",
     "youtube_url": "https://www.youtube.com/results?search_query=Weezer%20Buddy%20Holly%20official"
   },
@@ -384,8 +324,8 @@
     "title": "Undone (The Sweater Song)",
     "artist": "Weezer",
     "genre": "Alternative Rock",
-    "valence": -0.2,
-    "energy": 0.5,
+    "valence": -0.25,
+    "energy": 0.45,
     "tempo": "medium",
     "youtube_url": "https://www.youtube.com/results?search_query=Weezer%20Undone%20%28The%20Sweater%20Song%29%20official"
   },
@@ -404,8 +344,8 @@
     "title": "Bu Sabahların Bir Anlamı Olmalı",
     "artist": "Vega",
     "genre": "Alternative Rock",
-    "valence": -0.4,
-    "energy": 0.5,
+    "valence": -0.45,
+    "energy": 0.45,
     "tempo": "medium",
     "youtube_url": "https://www.youtube.com/results?search_query=Vega%20Bu%20Sabahlar%C4%B1n%20Bir%20Anlam%C4%B1%20Olmal%C4%B1%20official"
   },
@@ -434,8 +374,8 @@
     "title": "Birileri Var",
     "artist": "Şebnem Ferah",
     "genre": "Rock",
-    "valence": -0.2,
-    "energy": 0.6,
+    "valence": -0.25,
+    "energy": 0.65,
     "tempo": "medium",
     "youtube_url": "https://www.youtube.com/results?search_query=%C5%9Eebnem%20Ferah%20Birileri%20Var%20official"
   },
@@ -454,8 +394,8 @@
     "title": "Feel Good Inc.",
     "artist": "Gorillaz",
     "genre": "Alternative",
-    "valence": 0.4,
-    "energy": 0.7,
+    "valence": 0.34,
+    "energy": 0.65,
     "tempo": "medium",
     "youtube_url": "https://www.youtube.com/results?search_query=Gorillaz%20Feel%20Good%20Inc.%20official"
   },
@@ -464,8 +404,8 @@
     "title": "Clint Eastwood",
     "artist": "Gorillaz",
     "genre": "Alternative",
-    "valence": -0.2,
-    "energy": 0.5,
+    "valence": -0.24,
+    "energy": 0.45,
     "tempo": "medium",
     "youtube_url": "https://www.youtube.com/results?search_query=Gorillaz%20Clint%20Eastwood%20official"
   },
@@ -474,8 +414,8 @@
     "title": "DARE",
     "artist": "Gorillaz",
     "genre": "Electronic",
-    "valence": 0.8,
-    "energy": 0.9,
+    "valence": 0.74,
+    "energy": 0.83,
     "tempo": "high",
     "youtube_url": "https://www.youtube.com/results?search_query=Gorillaz%20DARE%20official"
   },
@@ -484,8 +424,8 @@
     "title": "One More Time",
     "artist": "Daft Punk",
     "genre": "Electronic",
-    "valence": 0.95,
-    "energy": 0.9,
+    "valence": 0.88,
+    "energy": 0.85,
     "tempo": "high",
     "youtube_url": "https://www.youtube.com/results?search_query=Daft%20Punk%20One%20More%20Time%20official"
   },
@@ -504,8 +444,8 @@
     "title": "Around the World",
     "artist": "Daft Punk",
     "genre": "Electronic",
-    "valence": 0.6,
-    "energy": 0.8,
+    "valence": 0.53,
+    "energy": 0.73,
     "tempo": "high",
     "youtube_url": "https://www.youtube.com/results?search_query=Daft%20Punk%20Around%20the%20World%20official"
   },
@@ -524,8 +464,8 @@
     "title": "Boys Don't Cry",
     "artist": "The Cure",
     "genre": "Post-Punk",
-    "valence": 0.5,
-    "energy": 0.7,
+    "valence": 0.45,
+    "energy": 0.65,
     "tempo": "medium",
     "youtube_url": "https://www.youtube.com/results?search_query=The%20Cure%20Boys%20Don%27t%20Cry%20official"
   },
@@ -534,8 +474,8 @@
     "title": "Lovesong",
     "artist": "The Cure",
     "genre": "Gothic Rock",
-    "valence": -0.2,
-    "energy": 0.4,
+    "valence": -0.27,
+    "energy": 0.35,
     "tempo": "low",
     "youtube_url": "https://www.youtube.com/results?search_query=The%20Cure%20Lovesong%20official"
   },
@@ -544,8 +484,8 @@
     "title": "Just Like Heaven",
     "artist": "The Cure",
     "genre": "Alternative Rock",
-    "valence": 0.7,
-    "energy": 0.6,
+    "valence": 0.63,
+    "energy": 0.55,
     "tempo": "medium",
     "youtube_url": "https://www.youtube.com/results?search_query=The%20Cure%20Just%20Like%20Heaven%20official"
   },
@@ -564,8 +504,8 @@
     "title": "Last Nite",
     "artist": "The Strokes",
     "genre": "Indie Rock",
-    "valence": 0.6,
-    "energy": 0.8,
+    "valence": 0.55,
+    "energy": 0.75,
     "tempo": "high",
     "youtube_url": "https://www.youtube.com/results?search_query=The%20Strokes%20Last%20Nite%20official"
   },
@@ -574,8 +514,8 @@
     "title": "Someday",
     "artist": "The Strokes",
     "genre": "Indie Rock",
-    "valence": 0.5,
-    "energy": 0.7,
+    "valence": 0.45,
+    "energy": 0.75,
     "tempo": "medium",
     "youtube_url": "https://www.youtube.com/results?search_query=The%20Strokes%20Someday%20official"
   },
@@ -604,8 +544,8 @@
     "title": "Şımarık",
     "artist": "Tarkan",
     "genre": "Pop",
-    "valence": 0.65,
-    "energy": 0.82,
+    "valence": 0.6,
+    "energy": 0.87,
     "tempo": "medium",
     "youtube_url": "https://www.youtube.com/results?search_query=Tarkan%20%C5%9E%C4%B1mar%C4%B1k%20official"
   },
@@ -614,8 +554,8 @@
     "title": "Kuzu Kuzu",
     "artist": "Tarkan",
     "genre": "Pop",
-    "valence": 0.7,
-    "energy": 0.85,
+    "valence": 0.65,
+    "energy": 0.8,
     "tempo": "high",
     "youtube_url": "https://www.youtube.com/results?search_query=Tarkan%20Kuzu%20Kuzu%20official"
   },
@@ -624,8 +564,8 @@
     "title": "Californication",
     "artist": "Red Hot Chili Peppers",
     "genre": "Alternative Rock",
-    "valence": -0.2,
-    "energy": 0.6,
+    "valence": -0.24,
+    "energy": 0.55,
     "tempo": "medium",
     "youtube_url": "https://www.youtube.com/results?search_query=Red%20Hot%20Chili%20Peppers%20Californication%20official"
   },
@@ -634,8 +574,8 @@
     "title": "By the Way",
     "artist": "Red Hot Chili Peppers",
     "genre": "Alternative Rock",
-    "valence": 0.7,
-    "energy": 0.85,
+    "valence": 0.65,
+    "energy": 0.79,
     "tempo": "high",
     "youtube_url": "https://www.youtube.com/results?search_query=Red%20Hot%20Chili%20Peppers%20By%20the%20Way%20official"
   },
@@ -654,9 +594,59 @@
     "title": "Can't Stop",
     "artist": "Red Hot Chili Peppers",
     "genre": "Alternative Rock",
-    "valence": 0.8,
-    "energy": 0.95,
+    "valence": 0.75,
+    "energy": 0.9,
     "tempo": "high",
     "youtube_url": "https://www.youtube.com/results?search_query=Red%20Hot%20Chili%20Peppers%20Can%27t%20Stop%20official"
+  },
+  {
+    "id": 90,
+    "title": "Hele Bi Gel",
+    "artist": "Pinhani",
+    "genre": "Turkish Rock",
+    "valence": 0.6,
+    "energy": 0.35,
+    "tempo": "low",
+    "youtube_url": "https://www.youtube.com/results?search_query=Pinhani%20Hele%20Bi%20Gel%20official"
+  },
+  {
+    "id": 91,
+    "title": "Sadece",
+    "artist": "Kalben",
+    "genre": "Turkish Indie",
+    "valence": 0.39,
+    "energy": 0.23,
+    "tempo": "low",
+    "youtube_url": "https://www.youtube.com/results?search_query=Kalben%20Sadece%20official"
+  },
+  {
+    "id": 91,
+    "title": "Bodrum",
+    "artist": "Yüzyüzeyken Konuşuruz",
+    "genre": "Turkish Indie",
+    "valence": 0.45,
+    "energy": 0.3,
+    "tempo": "low",
+    "youtube_url": "https://www.youtube.com/results?search_query=Yüzyüzeyken%20Konuşuruz%20Bodrum%20official"
+  },
+  {
+    "id": 91,
+    "title": "Kendi Halimde",
+    "artist": "Can Kazaz",
+    "genre": "Turkish Indie",
+    "valence": 0.51,
+    "energy": 0.25,
+    "tempo": "low",
+    "youtube_url": "https://www.youtube.com/results?search_query=Can%20Kazaz%20Kendi%20Halimde%20official"
+  },
+  {
+    "id": 91,
+    "title": "Passionfruit",
+    "artist": "Drake",
+    "genre": "R&B",
+    "valence": 0.51,
+    "energy": 0.4,
+    "tempo": "low",
+    "youtube_url": "https://www.youtube.com/results?search_query=Drake%20Passionfruit%20official"
   }
 ]

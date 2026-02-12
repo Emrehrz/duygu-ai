@@ -4,6 +4,22 @@ import { analyzeMessage } from './api/analyze';
 import { getRecommendations } from './api/recommender';
 import Particles from './components/Particles';
 
+const isNetworkRelatedError = (error) => {
+  if (!error) return false;
+  if (error.code === 'SERVICE_UNAVAILABLE' || error.code === 'ECONNREFUSED') return true;
+  if (error.name === 'TypeError') return true;
+  const message = typeof error === 'string'
+    ? error
+    : (error.message || error.detail || '');
+  if (typeof message !== 'string') return false;
+  const lowerMsg = message.toLowerCase();
+  return lowerMsg.includes('failed to fetch') ||
+    lowerMsg.includes('networkerror') ||
+    lowerMsg.includes('network request failed') ||
+    lowerMsg.includes('connection refused') ||
+    lowerMsg.includes('econnrefused');
+};
+
 // Yardımcı Bileşen: Track Card
 const TrackCard = ({ track }) => (
   <div className="track-card">
@@ -24,6 +40,7 @@ function App() {
   const [inputError, setInputError] = useState(''); // Yeni state: input hatası
   const [isLoading, setIsLoading] = useState(false);
   const [hasStarted, setHasStarted] = useState(false); // UI Durumu
+  const [isServiceUnavailable, setIsServiceUnavailable] = useState(false);
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -62,6 +79,7 @@ function App() {
     if (!trimmed || isLoading) return;
 
     setInputError(''); // valid ise hatayı temizle
+    setIsServiceUnavailable(false); // yeni denemede servis durumunu sıfırla
 
     // İlk mesaj atıldığında UI değişsin
     if (!hasStarted) setHasStarted(true);
@@ -81,7 +99,6 @@ function App() {
     try {
       // 1. Analiz
       const analysisData = await analyzeMessage(userContent, messages);
-      // console.log("this is analysisData", analysisData);
 
       // Rate Limit Kontrolü: Backend'den hata objesi döndüyse yakala
       if (analysisData.error && analysisData.error.code === "RATE_LIMITED") {
@@ -111,7 +128,17 @@ function App() {
         };
         setMessages(prev => [...prev, repeatMsg]);
         return; // öneri yapmadan çık
-      } 
+      }
+
+      if(isServiceUnavailable){
+        setMessages(prev => [...prev, {
+          role: 'assistant',
+          type: 'text',
+          content: 'Şu an analiz servisine bağlanamıyorum, öneri yapamayacağım. Lütfen daha sonra tekrar deneyin.',
+          timestamp: new Date().toISOString()
+        }]);
+        return; // öneri yapmadan çık
+      }
       
       setMessages(prev => [...prev, assistantAnalysisMsg]);
 
@@ -128,7 +155,18 @@ function App() {
       setMessages(prev => [...prev, playlistMsg]);
 
     } catch (error) {
-      console.error("xxx", error.detail);
+      
+      if (isNetworkRelatedError(error)) {
+        setIsServiceUnavailable(true);
+        setMessages(prev => [...prev, {
+          role: 'assistant',
+          type: 'error',
+          content: ' Demo geçici olarak durdurulmuştur. Ancak projenin tüm kodları ve nasıl çalıştığı açık kaynaklı olarak githubta!',
+          link:"https://github.com/Emrehrz/duygu-ai",
+          timestamp: new Date().toISOString()
+        }]);
+        return; 
+      }
 
       const fallback =
         (typeof error === 'string' && error) ||
@@ -191,6 +229,15 @@ function App() {
                         <TrackCard key={i} track={track} />
                       ))}
                     </div>
+                  )} { msg.type === 'error' && (
+                    <div className="error-message">
+                      {msg.content}
+                      {msg.link && (
+                        <a href={msg.link} target="_blank" rel="noopener noreferrer">
+                          Github
+                        </a>
+                      )}
+                    </div>
                   )}
                 </div>
               </div>
@@ -228,6 +275,7 @@ function App() {
           </div>
         )}
           </div>
+
 
         </div>
       </div>
