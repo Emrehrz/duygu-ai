@@ -10,20 +10,6 @@ Duygu AI, React tabanlı bir frontend ve FastAPI tabanlı bir backend kullanan, 
 - ⚡ Hızlı geliştirme ortamı (Vite + FastAPI + Uvicorn)
 - 📡 HTTP API üzerinden ayrık frontend/backend mimarisi
 
-## 🛠️ Teknoloji Yığını
-
-**Frontend**
-
-- React 18
-- Vite
-- Modern CSS / animasyonlu arayüz
-
-**Backend**
-
-- FastAPI
-- Python 3.8+
-- Uvicorn
-
 ## 🧱 Mimari Genel Bakış
 
 - Frontend, tarayıcıda çalışan tek sayfa uygulamasıdır (SPA).
@@ -33,53 +19,53 @@ Duygu AI, React tabanlı bir frontend ve FastAPI tabanlı bir backend kullanan, 
    - Backend: `http://localhost:8000`
    - Frontend: `http://localhost:5173`
 
-## 🧠 Nasıl Çalışır? (Architecture & Logic)
-Duygu-AI, basit bir if/else kural seti veya kelime eşleşmesi (keyword matching) ile çalışmaz. Bunun yerine modern NLP (Doğal Dil İşleme) teknikleriyle metni vektör uzayında temsil eder ve benzerlik/mesafe hesaplarıyla duygu + müzik önerisi üretir.
+## 🧠 Nasıl Calisir? (Architecture & Logic)
+Duygu-AI, basit bir if/else kural seti veya kelime eslesmesi (keyword matching) ile calismaz. Bunun yerine modern NLP (Dogal Dil Isleme) teknikleriyle metni vektor uzayinda temsil eder ve benzerlik/mesafe hesaplariyla duygu + muzik onerisi uretir.
 
-Sistem 3 ana aşamadan oluşur:
+Sistem 3 ana asamadan olusur:
 
-> Akışın tamamı (özet):
+> Akisin tamami (ozet):
 
 ```mermaid
 flowchart LR
-  A[Kullanıcı metni] --> B[Embedding (sentence-transformers / MiniLM)]
-  B --> C[Anchor'larla Cosine Similarity]
-  C --> D[Softmax + Confidence]
-  D --> E[Emotion → Valence/Arousal haritalama]
-  E --> F[Öneri skoru: Öklid mesafesi + kurallar]
-  F --> G[Top tracks + youtube_url]
+  A["Kullanici metni"] --> B["Embedding - sentence-transformers MiniLM"]
+  B --> C["Anchor'lar ile cosine similarity"]
+  C --> D["Softmax ve confidence"]
+  D --> E["Emotion -> valence arousal"]
+  E --> F["Oneri skoru: oklid mesafesi + kurallar"]
+  F --> G["Top tracks ve YouTube URL"]
 ```
 
-> Not: `/analyze` endpoint'i `{ data, error }` envelope döndürür; rate limit durumunda `error.code = RATE_LIMITED` gelebilir.
+> Not: `/analyze` endpoint'i `{ data, error }` envelope dondurur; rate limit durumunda `error.code = RATE_LIMITED` gelebilir.
 
 ### 1) Anlamsal Analiz (Semantic Analysis)
-Kullanıcıdan gelen metin (örn. "Bugün işler çok yoğundu, pilim bitti"), `sentence-transformers` ile görece küçük ve hızlı bir model kullanılarak sayısal bir vektöre (embedding) dönüştürülür. Bu projede varsayılan model `paraphrase-multilingual-MiniLM-L12-v2` olup pratikte 384 boyutlu embedding üretir.
+Kullanicidan gelen metin (orn. "Bugun isler cok yogundu, pilim bitti"), `sentence-transformers` ile gorece kucuk ve hizli bir model kullanilarak sayisal bir vektore (embedding) donusturulur. Bu projede varsayilan model `paraphrase-multilingual-MiniLM-L12-v2` olup pratikte 384 boyutlu embedding uretir.
 
-Ardından sistem, önceden tanımlanmış 5 temel duygu "çapası" (anchor) ile karşılaştırır:
+Ardindan sistem, onceden tanimlanmis 5 temel duygu "capasi" (anchor) ile karsilastirir:
 - Happy
 - Sad
 - Calm
 - Energetic
 - Lonely
 
-Karşılaştırma, Cosine Similarity (Kosinüs benzerliği) üzerinden yapılır. Böylece kelimeler birebir örtüşmese bile (örn. "pilim bitti" vs "yorgunum"), model **anlamsal yakınlığı** yakalayabilir.
+Karsilastirma, Cosine Similarity (KosinUs benzerligi) uzerinden yapilir. Boylece kelimeler birebir ortusmese bile (orn. "pilim bitti" vs "yorgunum"), model **anlamsal yakinligi** yakalayabilir.
 
-Ek olarak, skorlar Softmax ile olasılığa çevrilir ve en yüksek olasılık **confidence** olarak kullanılır (modelin "ne kadar emin" olduğu).
+Ek olarak, skorlar Softmax ile olasiliga cevrilir ve en yuksek olasilik **confidence** olarak kullanilir (modelin "ne kadar emin" oldugu).
 
-> Güvenlik/robustness: Metin aşırı tekrarlıysa (ör. tek karakter spam), backend analiz sonucu `neutral` döndürerek sistemi daha kararlı tutar.
+> Guvenlik/robustness: Metin asiri tekrarliysa (orn. tek karakter spam), backend analiz sonucu `neutral` dondurerek sistemi daha kararlı tutar.
 
-### 2) Duygu Haritalama (Valence – Arousal Model)
-Bulunan duygu, müzik psikolojisinde sık kullanılan Valence/Arousal düzlemindeki hedef bir noktaya çevrilir:
-- **Valence (X):** duygunun ne kadar pozitif/negatif olduğu
-- **Arousal (Y):** duygunun ne kadar enerjik/sakin olduğu
+### 2) Duygu Haritalama (Valence - Arousal Model)
+Bulunan duygu, muzik psikolojisinde sik kullanilan Valence/Arousal duzlemindeki hedef bir noktaya cevrilir:
+- **Valence (X):** duygunun ne kadar pozitif/negatif oldugu
+- **Arousal (Y):** duygunun ne kadar enerjik/sakin oldugu
 
-Basit bir sezgisel görselleştirme:
+Basit bir sezgisel gorsellestirme:
 
 ```text
-Energy (Arousal) ↑
-                 |   Öfkeli/Gergin (−V, +A)   |   Mutlu/Coşkulu (+V, +A)
-                 |----------------------------+----------------------------→ Valence
-                 |   Üzgün/Depresif (−V, −A)  |   Sakin/Huzurlu (+V, −A)
+Energy (Arousal) ^
+                 |   Ofkeli/Gergin (-V, +A)   |   Mutlu/Coskulu (+V, +A)
+                 |----------------------------+----------------------------> Valence
+                 |   Uzgun/Depresif (-V, -A)  |   Sakin/Huzurlu (+V, -A)
                  |
 ```
 
@@ -87,26 +73,26 @@ Energy (Arousal) ↑
 
 ![Russell's Circumplex Model](russell's%20circumplex%20model.jpg)
 
-> Örnek (projede kullanılan mapping): `calm → valence: 0.2, arousal: 0.2` (değerler kolayca ayarlanabilir).
+> Ornek (projede kullanilan mapping): `calm -> valence: 0.2, arousal: 0.2` (degerler kolayca ayarlanabilir).
 
-> Not: Bu yaklaşım Russell's Circumplex Model fikrinden ilham alır; amaç duyguyu 2 boyutlu bir koordinata indirip öneriyi sayısallaştırmaktır.
+> Not: Bu yaklasim Russell's Circumplex Model fikrinden ilham alir; amac duyguyu 2 boyutlu bir koordinata indirip oneriyi sayisallastirmaktir.
 
-### 3) Akıllı Öneri Algoritması (Recommendation Engine)
-Hedef (valence, arousal) belirlendikten sonra şarkı kataloğundaki her parça için temel benzerlik skoru hesaplanır:
-- Şarkının (valence, energy) noktası ile hedef nokta arasındaki **Öklid mesafesi** bulunur
-- Mesafe, `1 / (1 + distance)` ile 0–1 aralığına yaklaştırılarak "similarity" elde edilir
+### 3) Akilli Oneri Algoritmasi (Recommendation Engine)
+Hedef (valence, arousal) belirlendikten sonra sarki katalogundaki her parca icin temel benzerlik skoru hesaplanir:
+- Sarkinin (valence, energy) noktasi ile hedef nokta arasindaki **Oklid mesafesi** bulunur
+- Mesafe, `1 / (1 + distance)` ile 0-1 araligina yaklastirilarak "similarity" elde edilir
 
-Sonra sadece mesafe ile yetinmeyip şu akıllı kurallar uygulanır:
-- **Tempo Uyumu (Tempo Matching):** kullanıcı enerjisi yüksekse `high` tempo bonus, `low` tempo ceza (düşük enerjide tersine)
-- **Duygu Tutarlılığı (Mood Consistency):** kullanıcı çok pozitifken çok negatif şarkılar (ve tersi) cezalandırılır
-- **Çeşitlilik (Diversity):** aynı sanatçıdan en fazla 1, aynı türden en fazla 2 parça seçilerek liste dengelenir
+Sonra sadece mesafe ile yetinmeyip su akilli kurallar uygulanir:
+- **Tempo Uyumu (Tempo Matching):** kullanici enerjisi yuksekse `high` tempo bonus, `low` tempo ceza (dusuk enerjide tersine)
+- **Duygu Tutarliligi (Mood Consistency):** kullanici cok pozitifken cok negatif sarkilar (ve tersi) cezalandirilir
+- **Cesitlilik (Diversity):** ayni sanatcidan en fazla 1, ayni turden en fazla 2 parca secilerek liste dengelenir
 
-Çıktı olarak frontend, önerilen parçalardaki `youtube_url` alanını bir "play" kısayolu olarak gösterir.
+Cikti olarak frontend, onerilen parcalardaki `youtube_url` alanini bir "play" kisayolu olarak gosterir.
 
-### 💡 Neden LLM (GPT) değil de MiniLM? (Opsiyonel)
-Bu proje için hedef; düşük gecikme (low latency) ve düşük kaynak tüketimi. Sadece "anlamsal yakınlığı" yakalamak için büyük bir LLM çalıştırmak yerine, bu iş için optimize edilmiş daha küçük bir sentence embedding modeliyle CPU üzerinde hızlı inference yapılabilir.
+### 💡 Neden LLM (GPT) degil de MiniLM? (Opsiyonel)
+Bu proje icin hedef; dusuk gecikme (low latency) ve dusuk kaynak tuketimi. Sadece "anlamsal yakinligi" yakalamak icin buyuk bir LLM calistirmak yerine, bu is icin optimize edilmis daha kucuk bir sentence embedding modeliyle CPU uzerinde hizli inference yapilabilir.
 
-İstersen ayrıca Russell's Circumplex Model için bir görsel ekleyebilirsin (ör. kendi çizdiğin veya lisansı uygun bir görsel). Bu README’de ise telif riski olmaması için metin + diyagram ile anlatımı tuttum.
+Istersen ayrica Russell's Circumplex Model icin bir gorsel ekleyebilirsin (orn. kendi cizdigin veya lisansi uygun bir gorsel). Bu README’de ise telif riski olmamasi icin metin + diyagram ile anlatimi tuttum.
 
 ## 📦 Kurulum ve Çalıştırma
 
